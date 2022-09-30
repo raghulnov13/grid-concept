@@ -23,4 +23,58 @@
     grid-template-columns: repeat(4,200px);
     /* grid-template-rows: 300px 100px; */
     grid-auto-rows: 200px;
+    grid-gap: 20px;
 }
+.grid-items{
+    background-color: aqua;
+    text-align: center;
+    
+}
+/* header */
+.grid-container4{
+    display: grid;
+    grid-template-columns: 200px 250px ;
+    grid-auto-rows: minmax(150px,auto);
+    grid-gap: 10px;
+    grid-template-areas: 
+    "header header"
+    "sidebar content"
+    "sidebar content";
+}
+.grid-items-1{
+    grid-area: header;
+    background-color: blue;
+}
+.grid-items-2{
+    grid-area: sidebar;
+    background-color: green;
+}
+.grid-items-3{
+    grid-area: content;
+    background-color: green;
+}
+.grid-items-4, .grid-items-5, .grid-items-6 {
+    background-color: violet;
+}
+/* example */
+.container {
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    
+  }
+  .item-a,.item-b,.item-c,.item-d,.item-e{
+    background-color: coral;
+    text-align: center;
+  }
+  .item-a {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    
+  }
+  .item-e {
+    grid-column: 5;
+    grid-row: 1 / 4;
+  }
